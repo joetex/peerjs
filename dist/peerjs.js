@@ -6665,7 +6665,7 @@ function () {
   };
 
   class_1.prototype.isSecure = function () {
-    return location.protocol === "https:";
+    return false;
   };
 
   return class_1;
