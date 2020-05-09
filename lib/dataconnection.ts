@@ -54,7 +54,7 @@ export class DataConnection extends BaseConnection implements IDataConnection {
         this.connectionId = this.options.connectionId || DataConnection.ID_PREFIX + util.randomToken();
 
         this.label = this.options.label || this.connectionId;
-        this.serialization = this.options.serialization || SerializationType.Binary;
+        this.serialization = this.options.serialization || SerializationType.JSON;
         this.reliable = !!this.options.reliable;
 
         this._encodingQueue.on('done', (ab: ArrayBuffer) => {
